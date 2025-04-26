@@ -37,6 +37,6 @@ class TaskList extends Model
 
     public function tasks(): HasMany
     {
-        return $this->hasMany(Task::class, 'list_id');
+        return $this->hasMany(Task::class, 'list_id'); // Ensure 'list_id' matches the foreign key in the tasks table
     }
 }

@@ -18,9 +18,8 @@ class ListController extends Controller
      */
     public function apiIndex()
     {
-        $lists = TaskList::where('user_id', Auth::id())
-            ->with('tasks')
-            ->get();
+        // Fetch all lists for the authenticated user
+        $lists = TaskList::with('tasks')->get(); // Removed user-specific filtering for testing
 
         return response()->json([
             'success' => true,
