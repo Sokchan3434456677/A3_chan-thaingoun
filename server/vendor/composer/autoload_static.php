@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd412a1a8bbffc0550cd686b0f2ccf47b
+class ComposerStaticInit2f991fa3a76eb237538711052e286fd7
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -626,6 +626,7 @@ class ComposerStaticInitd412a1a8bbffc0550cd686b0f2ccf47b
         'App\\Exceptions\\HandleExceptions' => __DIR__ . '/..' . '/laravel/pint/app/Exceptions/HandleExceptions.php',
         'App\\Factories\\ConfigurationFactory' => __DIR__ . '/..' . '/laravel/pint/app/Factories/ConfigurationFactory.php',
         'App\\Factories\\ConfigurationResolverFactory' => __DIR__ . '/..' . '/laravel/pint/app/Factories/ConfigurationResolverFactory.php',
+        'App\\Http\\Controllers\\Api\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/AuthController.php',
         'App\\Http\\Controllers\\Api\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ProductController.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
@@ -8211,9 +8212,9 @@ class ComposerStaticInitd412a1a8bbffc0550cd686b0f2ccf47b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd412a1a8bbffc0550cd686b0f2ccf47b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd412a1a8bbffc0550cd686b0f2ccf47b::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitd412a1a8bbffc0550cd686b0f2ccf47b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2f991fa3a76eb237538711052e286fd7::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2f991fa3a76eb237538711052e286fd7::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit2f991fa3a76eb237538711052e286fd7::$classMap;
 
         }, null, ClassLoader::class);
     }

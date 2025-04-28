@@ -11,12 +11,19 @@ export default function Product({ addToCart }) {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8080/api.php');
+        const token = "2|pKO8VjAioeKKIFgkidGiMDgTy33zy4nWAZos5h273c1605ee";
+        const response = await fetch('http://127.0.0.1:8000/api/lists', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        });
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setProducts(data);
+        setProducts(data.data); // Extract the 'data' array from the response
       } catch (error) {
         setError(error.message);
       } finally {
@@ -306,7 +313,7 @@ export default function Product({ addToCart }) {
           <Quickview 
             product={selectedProduct} 
             onClose={closeQuickView} 
-            addToCart={addToCart} // Pass addToCart here
+            addToCart={addToCart}
           />
         )}
         <div className="flex-c-m flex-w w-full p-t-45">

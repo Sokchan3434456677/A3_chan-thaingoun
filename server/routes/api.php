@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListController;
 
+use App\Http\Controllers\PaymentController;
 
 
 Route::post('/login', [AuthController::class, 'login']);
@@ -33,6 +34,9 @@ Route::delete('/lists/{id}', [ListController::class, 'apiDestroy'])->middleware(
 
 });
 
+
+Route::get('/init-payment', [PaymentController::class, 'initPayment']);
+Route::get('/check-status/{txnId}', [PaymentController::class, 'checkStatus']);
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();
