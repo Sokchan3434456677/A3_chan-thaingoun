@@ -66,8 +66,8 @@ class TaskController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'due_date' => 'nullable|date',
-            'list_id' => 'required|exists:lists,id',
-            'is_completed' => 'boolean'
+            'is_completed' => 'boolean',
+            'image_url' => 'nullable|url' // Added validation
         ]);
 
         Task::create($validated);
@@ -95,7 +95,7 @@ class TaskController extends Controller
             'description' => 'nullable|string',
             'due_date' => 'nullable|date',
             'is_completed' => 'boolean',
-            'list_id' => 'required|exists:lists,id'
+            'image_url' => 'nullable|url' // Added validation
         ]);
 
         $task->update($validated);

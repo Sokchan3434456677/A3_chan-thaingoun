@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Task extends Model
 {
@@ -15,15 +14,16 @@ class Task extends Model
         'description',
         'is_completed',
         'due_date',
-        'list_id'
+        'image_url'
     ];
 
     protected $casts = [
         'is_completed' => 'boolean',
-        'due_date' => 'date'
+        'due_date' => 'date',
+        'image_url' => 'string'
     ];
 
-    public function list(): BelongsTo
+    public function list()
     {
         return $this->belongsTo(TaskList::class, 'list_id');
     }
