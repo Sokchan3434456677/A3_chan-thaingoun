@@ -11,7 +11,7 @@ export default function Product({ addToCart }) {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const token = "2|pKO8VjAioeKKIFgkidGiMDgTy33zy4nWAZos5h273c1605ee";
+        const token = "1|TknjBRK7Xypf7HwE8mPsifWPBWOhycxwyvPjTlpb2933fabe";
         const response = await fetch('http://127.0.0.1:8000/api/lists', {
           headers: {
             'Authorization': `Bearer ${token}`,
