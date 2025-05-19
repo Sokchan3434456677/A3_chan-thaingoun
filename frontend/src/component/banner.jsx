@@ -91,7 +91,7 @@ export default function Banner() {
       try {
         const response = await fetch('http://127.0.0.1:8000/api/banners', {
           headers: {
-            Authorization: 'Bearer 2|B2NGCsT1Q4wZHaJJTUsmQTqckvwlPNtN4SJIuHMI38e136d1',
+            Authorization: 'Bearer 1|IQyfO8oP6SNzyulaHmv5cwJb82GCUyOqxsfO1Sw626fca726',
             'Content-Type': 'application/json',
           },
         });

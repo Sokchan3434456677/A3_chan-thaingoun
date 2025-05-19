@@ -60,7 +60,7 @@ function App() {
         removeFromCart={removeFromCart} 
         totalPrice={totalPrice} 
       />
-      <Banner />
+      {/* <Banner /> */}
       <Product addToCart={addToCart} />
       <Footer />
     </div>
